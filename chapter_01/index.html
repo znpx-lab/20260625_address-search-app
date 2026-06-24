@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>郵便番号検索</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="assets/style.css">
+  </head>
+  <body>
+    <h1>郵便番号検索</h1>
+
+    <div id="search-form">
+      <input
+        type="text"
+        id="zipcode"
+        placeholder="郵便番号（7桁）"
+        maxlength="7"
+        value=""
+      />
+      <button id="search">検索</button>
+    </div>
+
+    <div id="result">
+      <p>住所: <span id="address"></span></p>
+      <button id="copy" style="display: none">クリップボードにコピー</button>
+      <p class="error"><span id="error-message"></span></p>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/inputValidator.js"></script>
+    <script src="js/addressSearcher.js"></script>
+    <script src="js/error.js"></script>
+    <script src="js/result.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
