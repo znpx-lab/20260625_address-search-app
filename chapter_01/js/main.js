@@ -19,6 +19,7 @@ searchButton.addEventListener("click", async () => {
 
 // Issue 2
 zipcodeInputElement.addEventListener("input", () => {
+     validateInput(zipcodeInputElement);
 });
 
 /*
