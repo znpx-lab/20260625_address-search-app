@@ -5,7 +5,17 @@ const searchButton = document.getElementById("search");
 
 // Issue 1
 searchButton.addEventListener("click", async () => {
+ clearError();
+ const zipcode = zipcodeInputElement.value;
+ console.log(zipcode);
+ if (!validateInputOnSearch(zipcode)) {
+   return;
+ }
+ const address = await searchAddress(zipcode);
+ console.log(address);
+ showResult(address);
 });
+
 
 // Issue 2
 zipcodeInputElement.addEventListener("input", () => {
