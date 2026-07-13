@@ -1,8 +1,13 @@
 // Issue 2
 function validateInput(inputElement) {
+   inputElement.value = inputElement.value.replace(/[^0-9]/g, "");
 }
 
 function validateInputOnSearch(zipcode) {
+   if (zipcode.length !== 7) {
+   displayError("7桁の郵便番号を入力してください。");
+   return false;
+ }
   return true;
 }
 
